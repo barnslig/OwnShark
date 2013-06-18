@@ -1,0 +1,252 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+	color: #000;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+#loading {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+	background: #fff;
+	opacity: 0;
+	display: none;
+}
+#loading.loaded {
+	opacity: 0.8;
+	display: block;
+}
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+}
+.right {
+	float: right;
+}
+
+header {
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50px;
+	background: #eee;
+}
+header input {
+	width: 100%;
+	left: 200px;
+	border: 0;
+	height: 47px;
+	outline: none;
+	font-size: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: none;
+}
+
+article {
+	position: absolute;
+	top: 47px;
+	left: 0;
+	right: 0;
+	padding-bottom: 350px;
+}
+.gen-list {
+	text-align: center;
+	padding-left: 0;
+ 	margin-right: -20px;
+}
+.gen-list li {
+	list-style: none;
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	background: #eee;
+	overflow: hidden;
+	position: relative;
+	background-size: 100%;
+}
+.gen-list li a {
+	display: block;
+	height: 100%;
+}
+.gen-list li h2 {
+	position: absolute;
+	bottom: 0;
+	font-size: 20px;
+	text-align: left;
+}
+.gen-list li h2 span {
+	background: #fff;
+	padding-right: 3px;
+}
+
+#wrapper-artist {
+	width: 80%;
+	margin: auto;
+	padding-top: 8px;
+}
+.overview-list {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.overview-list li {
+	width: 250px;
+	height: 150px;
+}
+.overview-list h1 {
+	margin-bottom: 1em;
+}
+
+ul#albums {
+ 	margin-top: 50px;
+}
+ul#albums.single {
+	text-align: left;
+	padding-left: 27px;
+}
+ul#albums li {
+	width: 250px;
+	height: 250px;
+}
+#albums-artist {
+	position: relative;
+	max-width: 900px;
+	margin: auto;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+#albums-artist h1 {
+	font-size: 50px;
+	display: inline-block;
+	margin-top: 50px;
+}
+#albums-artist h1 span {
+	background: #fff;
+	padding-right: 15px;
+}
+
+ol#album-titles {
+	position: absolute;
+	top: 125px;
+	left: 34%;
+	right: 20px;
+	background: rgba(255, 255, 255, 0.8);
+	list-style-position: inside;
+	padding: 0;
+	border: 1px #ccc solid;
+	margin-bottom: 25px;
+}
+ol#album-titles li {
+	white-space: nowrap;
+}
+ol#album-titles li a {
+	display: block;
+	border-bottom: 1px #ccc solid;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+ol#album-titles li a #time {
+	float: right;
+}
+ol#album-titles li a:hover {
+	background: rgba(200, 200, 200, 0.4);
+}
+ol#album-titles li:last-child a {
+	border: none;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #ddd;
+}
+#player {
+	height: 50px;
+}
+#player.player-open {
+	height: auto;
+}
+#player #player-player {
+	margin: 0;
+	font-size: 0;
+	height: 50px;
+	border-bottom: 1px #ccc solid;
+}
+#player #player-player a {
+	display: inline-block;
+	border-right: 1px #ccc solid;
+	padding: 12px 15px 12px 15px;
+	font-size: 18px;
+	margin-top: 0;
+}
+#player #player-player a:hover {
+	background: #cdcdcd;
+}
+#player #player-player a:first-child {
+	border-left: 1px #ccc solid;
+}
+#player #player-player a:last-child {
+	border-left: 1px #ccc solid;
+	border-right: 0;
+}
+#player #player-player h1 {
+	display: inline-block;
+	font-size: 20px;
+	margin-left: 15px;
+	width: 200px;
+	white-space: nowrap;
+}
+#player #player-player input[type='range'] {
+	-webkit-appearance: none !important;
+	background: #ccc;
+	height: 10px;
+	margin-left: 15px;
+	position: absolute;
+	left: 350px;
+	top: 19px;
+	right: 150px;
+}
+input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none !important;
+	border-radius: 200px;
+	background: #ff8800;
+	width: 20px;
+	height: 20px;
+}
+#player #player-player small {
+	font-size: 14px;
+	margin-right: 20px;
+}
+#player #player-playlist li#player-playing {
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 991px) {
+	#wrapper-artist {
+		width: 100%;
+	}
+	ul#albums.single {
+		text-align: center;
+	}
+	ol#album-titles {
+		left: 20px;
+		top: 450px;
+	}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="webplayer.js"></script>
+		<script>
+			var player;
+			$(document).ready(function() {
+				player = new WebPlayer();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="loading"></div>
+		<header>
+			<form action="">
+				<input type="text" name="q" placeholder="Suchen" />
+			</form>
+		</header>
+		<article id="content">
+		</article>
+		<footer>
+			<div id="player">
+				<figure id="player-player">
+					<a id="playerprev" href="javascript:player.p.prev();"><i class="icon-backward"></i></a>
+					<a id="player-toggle" href="javascript:player.p.toggle();"><i class="icon-play"></i></a>
+					<a id="player-next" href="javascript:player.p.next();"><i class="icon-forward"></i></a>
+					<h1>Daft Punk - Get Lucky</h1>
+					<input type="range" id="player-pos" min="0" max="400" value="0">
+					<div class="right">
+						<small>1:50 / 3:30</small>
+						<a href="javascript:player.p.togglePlaylist();"><i class="icon-tasks"></i></a>
+					</div>
+				</figure>
+				<ul id="player-playlist">
+				</ul>
+			</div>
+		</footer>
+	</body>
+</html>
